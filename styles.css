@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   max-width: 100%;
+}
+
+body {
+   font-size: 12px;
+   font-family: "Barlow Semi Condensed", sans-serif;
+   background-color: hsl(0, 0%, 81%);
+}
+
+p {
+   opacity: 50%;
+   font-size: 15px;
+}
+
+h1 {
+   margin-bottom: 1rem;
+}
+
+.container {
+   margin: 2rem auto;
+   width: 90%;
+   max-width: 1440px;
+   display: grid;
+   gap: 2rem;
+}
+
+.card {
+   padding: 1.5rem;
+   border-radius: 10px;
+}
+
+.user {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1.2rem;
+}
+
+.user__image {
+   border-radius: 50%;
+   margin-right: 1rem;
+   border: solid 2px white;
+}
+
+.user__name {
+   opacity: 90%;
+}
+
+.card--purple {
+   background-color: hsl(263, 55%, 52%);
+   color: white;
+}
+
+.card--grey {
+   background-color: hsl(217, 19%, 35%);
+   color: white;
+}
+
+.card--white-small {
+   background-color: hsl(0, 0%, 100%);
+}
+
+.card--dark {
+   background-color: hsl(219, 29%, 14%);
+   color: white;
+}
+
+.card--white-big {
+   background-color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+   font-size: 11px;
+   text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1100px) {
+   .container {
+      grid-template-areas:
+         "card--purple card--purple card--grey card--white-big"
+         "card--white-small card--dark card--dark card--white-big";
+
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   .card {
+      padding: 2rem;
+   }
+
+   .card--purple {
+      grid-area: card--purple;
+   }
+
+   .card--grey {
+      grid-area: card--grey;
+   }
+
+   .card--white-small {
+      grid-area: card--white-small;
+   }
+
+   .card--dark {
+      grid-area: card--dark;
+   }
+
+   .card--white-big {
+      grid-area: card--white-big;
+   }
+}
